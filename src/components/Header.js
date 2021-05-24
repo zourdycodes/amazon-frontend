@@ -11,7 +11,7 @@ function Header() {
     <header>
       {/* TOP NAV */}
       <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
-        <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
+        <div className="mt-2 flex items-center self-stretch flex-grow sm:flex-grow-0">
           <Image
             src="https://links.papareact.com/f90"
             width={150}
@@ -46,7 +46,7 @@ function Header() {
         4. whitespace-nowrap ==> if things get too long
         5. md: ==> on medium screen
         */}
-        <div className="text-white flex items-center text-xs space-x-6 mx-6 whitespace-nowrap">
+        <div className="text-white flex items-center text-xs space-x-6 md:mx-6 xs:mx-3 whitespace-nowrap">
           <div className="link">
             <p>Hello Muhammad Zourdy!</p>
             <p className="font-extrabold md:text-sm">Account & Lists</p>
