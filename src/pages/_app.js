@@ -3,6 +3,7 @@ import { store } from "../app/store";
 import "../styles/globals.css";
 import TagManager from "react-gtm-module";
 import { useEffect } from "react";
+import { Provider as AuthProvider } from "next-auth/client";
 
 const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
@@ -10,9 +11,11 @@ const MyApp = ({ Component, pageProps }) => {
   }, []);
 
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+    <AuthProvider session={pageProps.session}>
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </AuthProvider>
   );
 };
 
